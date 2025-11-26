@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDIs 모바일웹</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <header>
+        <div class="header_wrap">
+            <h1><a href="/"><img src="images/logo_white.png" alt="REDis 저수지 지진 재해정보시스템"></a></h1>
+            <a href="" class="btn_total_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+
+        <!-- 모바일 사이드 메뉴 -->
+        <nav class="mobile_menu">
+            <ul class="mobile_menu_list">
+                <li><a href="#menu1">메뉴1</a></li>
+                <li><a href="#menu2">메뉴2</a></li>
+                <li><a href="#menu3">메뉴3</a></li>
+            </ul>
+        </nav>
+
+        <!-- 메뉴 배경 오버레이 -->
+        <div class="menu_overlay"></div>
+
+    </header>
+
+
+    <main class="container">
+        <section class="back_title">
+            <a href="" class="btn_back"><img src="images/btn_back.png" alt="뒤로가기"></a>
+            <h2><strong>원주</strong> 궁촌 저수지</h2>
+        </section>    
+    
+        <div class="container_area">
+           
+            <section class="area_detail_info">               
+                <div class="area_detail_info_content">
+                    <ul class="tab_menu">
+                        <li><a href="#" data-tab="area_tab1" class="active">제원</a></li>
+                        <li><a href="#" data-tab="area_tab2">계측</a></li>
+                        <li><a href="#" data-tab="area_tab3">모식도</a></li>
+                    </ul>
+
+                    <div id="area_tab1" class="area_tab_content">
+                        <h3 class="detail_info_title">제원</h3>
+                        <div class="table_area_wrap" id="table_w1" style="margin-top:5px;">
+                            <table>
+                                <colgroup>
+                                    <col style="width:30%">
+                                    <col style="width:70%">
+                                </colgroup>
+                                <tbody id="fac_info_table">
+                                    <tr><th>소재지</th><td>인천광역시 강화군 교동면 난정리</td></tr>
+                                    <tr><th>수원공 구분</th><td>주수원</td></tr>
+                                    <tr><th>제체길이</th><td>3270(m)</td></tr>
+                                    <tr><th>제체높이</th><td>7.7(m) (표고 : 13.7 El.m)</td></tr>
+                                    <tr><th>총저수량</th><td>6214.1(천㎥)</td></tr>
+                                    <tr><th>유효저수량</th><td>6214.1(천㎥)</td></tr>
+                                    <tr><th>유역면적</th><td>1884(ha/만㎡)</td></tr>
+                                    <tr><th>수혜면적</th><td>889.38(ha/만㎡)</td></tr>
+                                    <tr><th>만수면적</th><td>119(ha/만㎡)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="area_tab2" class="area_tab_content" style="display: none;">
+                        <h3 class="detail_info_title">계측</h3>
+                        <div class="table_area_wrap2" id="table_w2">
+                            <table>
+                                <colgroup>
+                                    <col style="width:26.5%">
+                                    <col style="width:24.5%">
+                                    <col style="width:24.5%">
+                                    <col style="width:24.5%">
+                                </colgroup>
+                                <tbody id="raw_info_table">
+                                    <tr><th>장비명</th><th>현재값</th><th>전일대비</th><th>관리단계</th></tr>
+                                    <tr><td>지진가속도계1</td><td>미수신</td><td>미수신</td><td><div class="legend-color color-gray"></div>미수신</td></tr>
+                                    <tr><td>지진가속도계2</td><td>미수신</td><td>미수신</td><td><div class="legend-color color-gray"></div>미수신</td></tr>
+                                    <tr><td>지진가속도계3</td><td>미수신</td><td>미수신</td><td><div class="legend-color color-gray"></div>미수신</td></tr>
+                                    <tr><td>외측1(S2)(El.m)</td><td>-</td><td>-</td><td>-</td></tr>
+                                    <tr><td>내측2(S3)(El.m)</td><td>-</td><td>-</td><td>-</td></tr>
+                                    <tr><td>외측2(S4)(El.m)</td><td>-</td><td>-</td><td>-</td></tr>
+                                    <tr><td>내측3(S5)(El.m)</td><td>-</td><td>-</td><td>-</td></tr>
+                                    <tr><td>외측3(S6)(El.m)</td><td>-</td><td>-</td><td><div class="legend-color color-blue"></div>관심</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="area_tab3" class="area_tab_content" style="display: none;">
+                        <!-- 모식도 콘텐츠 -->
+                        <h3 class="detail_info_title">모식도</h3>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 하단메뉴 -->
+    <nav class="bottom_nav">
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="index.html" class="nav_link on">
+              <span class="nav_icon" data-icon="menu_icon1"></span>
+              <span class="nav_text">계측</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="earthquake.html" class="nav_link">
+              <span class="nav_icon" data-icon="menu_icon2"></span>
+              <span class="nav_text">지진</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="cctv.html" class="nav_link">
+              <span class="nav_icon" data-icon="menu_icon3"></span>
+              <span class="nav_text">CCTV</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="settings.html" class="nav_link">
+              <span class="nav_icon" data-icon="menu_icon4"></span>
+              <span class="nav_text">관리</span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+    <!-- //하단메뉴 -->
+    <script>
+        // 메뉴 토글 기능
+        const btnTotalMenu = document.querySelector('.btn_total_menu');
+        const mobileMenu = document.querySelector('.mobile_menu');
+        const menuOverlay = document.querySelector('.menu_overlay');
+        const bottomNav = document.querySelector('.bottom_nav');
+        let isMenuOpen = false;
+
+        // 메뉴 열기/닫기
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+
+            if (isMenuOpen) {
+                mobileMenu.classList.add('active');
+                menuOverlay.classList.add('active');
+                btnTotalMenu.classList.add('open');
+                bottomNav.classList.add('hidden');
+            } else {
+                mobileMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                btnTotalMenu.classList.remove('open');
+                bottomNav.classList.remove('hidden');
+            }
+        }
+
+        // 버튼 클릭 이벤트
+        btnTotalMenu.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleMenu();
+        });
+
+        // 오버레이 클릭시 메뉴 닫기
+        menuOverlay.addEventListener('click', () => {
+            if (isMenuOpen) {
+                toggleMenu();
+            }
+        });
+
+        // 메뉴 링크 클릭시 메뉴 닫기
+        const menuLinks = document.querySelectorAll('.mobile_menu_list a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // 하단 네비게이션 링크 클릭 이벤트 처리
+        const navLinks = document.querySelectorAll('.nav_link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // 모든 nav_link의 on 클래스 제거
+                navLinks.forEach(l => l.classList.remove('on'));
+                // 클릭된 링크에 on 클래스 추가
+                link.classList.add('on');
+            });
+        });
+
+        // 탭 전환 기능
+        const tabLinks = document.querySelectorAll('.dashboard_tab2 a, .tab_menu a');
+        const tabContents = document.querySelectorAll('.tab_content, .area_tab_content');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const tabName = link.getAttribute('data-tab');
+
+                // 모든 탭 콘텐츠 숨기기
+                tabContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                // 클릭한 탭의 콘텐츠 보이기
+                const activeContent = document.getElementById(tabName);
+                if (activeContent) {
+                    activeContent.style.display = 'block';
+                }
+
+                // 탭 버튼 active 상태 변경
+                tabLinks.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

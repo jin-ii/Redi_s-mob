@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDIs 모바일웹</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <header>
+        <div class="header_wrap">
+            <h1><a href="/"><img src="images/logo_white.png" alt="REDis 저수지 지진 재해정보시스템"></a></h1>
+            <a href="" class="btn_total_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+
+        <!-- 모바일 사이드 메뉴 -->
+        <nav class="mobile_menu">
+            <ul class="mobile_menu_list">
+                <li><a href="#menu1">메뉴1</a></li>
+                <li><a href="#menu2">메뉴2</a></li>
+                <li><a href="#menu3">메뉴3</a></li>
+            </ul>
+        </nav>
+
+        <!-- 메뉴 배경 오버레이 -->
+        <div class="menu_overlay"></div>
+
+    </header>
+
+
+    <main class="container">   
+        <div class="container_area">
+          
+            <ul class="dashboard_tab2">
+                <li><a href="#" data-tab="tab1">실시간 PGA 모니터링</a></li>
+                <li><a href="#" data-tab="tab2" class="active">지진계측결과</a></li>
+            </ul>
+           
+            <h3 class="detail_info_title">지진계측결과</h3>
+
+            <div class="earthquake_list">
+                <div class="earthquake_item">
+                    <div class="earthquake_header">
+                        <div class="earthquake_info">
+                            <p class="earthquake_date">2025-11-07 09:44:44</p>
+                            <p class="earthquake_title">경남 통영시 남남서쪽36km 해역</p>
+                        </div>
+                        <p class="earthquake_magnitude">규모 2.9</p>
+                    </div>
+                    <div class="earthquake_buttons">
+                        <button class="btn_quick">신속</button>
+                        <button class="btn_excel">엑셀</button>
+                    </div>
+                </div>
+
+                <div class="earthquake_item">
+                    <div class="earthquake_header">
+                        <div class="earthquake_info">
+                            <p class="earthquake_date">2025-11-06 14:22:15</p>
+                            <p class="earthquake_title">서울 강남구 서초동 일대</p>
+                        </div>
+                        <p class="earthquake_magnitude">규모 3.2</p>
+                    </div>
+                    <div class="earthquake_buttons">
+                        <button class="btn_quick">신속</button>
+                        <button class="btn_excel">엑셀</button>
+                    </div>
+                </div>
+
+                <div class="earthquake_item">
+                    <div class="earthquake_header">
+                        <div class="earthquake_info">
+                            <p class="earthquake_date">2025-11-05 11:10:30</p>
+                            <p class="earthquake_title">부산 해운대구 동쪽15km 해역</p>
+                        </div>
+                        <p class="earthquake_magnitude">규모 2.5</p>
+                    </div>
+                    <div class="earthquake_buttons">
+                        <button class="btn_quick">신속</button>
+                        <button class="btn_excel">엑셀</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 하단메뉴 -->
+    <nav class="bottom_nav">
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="index.html" class="nav_link">
+              <span class="nav_icon" data-icon="menu_icon1"></span>
+              <span class="nav_text">계측</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="earthquake.html" class="nav_link on">
+              <span class="nav_icon" data-icon="menu_icon2"></span>
+              <span class="nav_text">지진</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="cctv.html" class="nav_link">
+              <span class="nav_icon" data-icon="menu_icon3"></span>
+              <span class="nav_text">CCTV</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="settings.html" class="nav_link">
+              <span class="nav_icon" data-icon="menu_icon4"></span>
+              <span class="nav_text">관리</span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+    <!-- //하단메뉴 -->
+    <script>
+        // 메뉴 토글 기능
+        const btnTotalMenu = document.querySelector('.btn_total_menu');
+        const mobileMenu = document.querySelector('.mobile_menu');
+        const menuOverlay = document.querySelector('.menu_overlay');
+        const bottomNav = document.querySelector('.bottom_nav');
+        let isMenuOpen = false;
+
+        // 메뉴 열기/닫기
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+
+            if (isMenuOpen) {
+                mobileMenu.classList.add('active');
+                menuOverlay.classList.add('active');
+                btnTotalMenu.classList.add('open');
+                bottomNav.classList.add('hidden');
+            } else {
+                mobileMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                btnTotalMenu.classList.remove('open');
+                bottomNav.classList.remove('hidden');
+            }
+        }
+
+        // 버튼 클릭 이벤트
+        btnTotalMenu.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleMenu();
+        });
+
+        // 오버레이 클릭시 메뉴 닫기
+        menuOverlay.addEventListener('click', () => {
+            if (isMenuOpen) {
+                toggleMenu();
+            }
+        });
+
+        // 메뉴 링크 클릭시 메뉴 닫기
+        const menuLinks = document.querySelectorAll('.mobile_menu_list a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // 하단 네비게이션 링크 클릭 이벤트 처리
+        const navLinks = document.querySelectorAll('.nav_link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // 모든 nav_link의 on 클래스 제거
+                navLinks.forEach(l => l.classList.remove('on'));
+                // 클릭된 링크에 on 클래스 추가
+                link.classList.add('on');
+            });
+        });
+
+        // 탭 전환 기능
+        const tabLinks = document.querySelectorAll('.dashboard_tab2 a, .tab_menu a');
+        const tabContents = document.querySelectorAll('.tab_content, .area_tab_content');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const tabName = link.getAttribute('data-tab');
+
+                // 모든 탭 콘텐츠 숨기기
+                tabContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                // 클릭한 탭의 콘텐츠 보이기
+                const activeContent = document.getElementById(tabName);
+                if (activeContent) {
+                    activeContent.style.display = 'block';
+                }
+
+                // 탭 버튼 active 상태 변경
+                tabLinks.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

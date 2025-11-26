@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDIs 모바일웹</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <header>
+        <div class="header_wrap">
+            <h1><a href="/"><img src="images/logo_white.png" alt="REDis 저수지 지진 재해정보시스템"></a></h1>
+            <a href="" class="btn_total_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+
+        <!-- 모바일 사이드 메뉴 -->
+        <nav class="mobile_menu">
+            <ul class="mobile_menu_list">
+                <li><a href="#menu1">메뉴1</a></li>
+                <li><a href="#menu2">메뉴2</a></li>
+                <li><a href="#menu3">메뉴3</a></li>
+            </ul>
+        </nav>
+
+        <!-- 메뉴 배경 오버레이 -->
+        <div class="menu_overlay"></div>
+
+    </header>
+
+    <main class="container">
+        <div class="container_area">
+            <section class="section_measure">
+                <div class="section_title">
+                    <h2>계측 정보</h2>
+                    <p class="font_info">최근통신 2025.11.11 13:00</p>
+                </div>
+            </section>
+
+            <article class="article_seismic" id="art_table">
+                <ul class="dashboard_tab2">
+                    <li><a href="#" data-tab="tab1">지진</a></li>
+                    <li><a href="#" data-tab="tab2" class="active">누수</a></li>
+                    <li><a href="#" data-tab="tab3">변위</a></li>
+                    <li><a href="#" data-tab="tab4">수문</a></li>
+                    <li><a href="#" data-tab="tab5" style="font-size:12px !important;">CCTV</a></li>
+                    <li><a href="#" data-tab="tab6">집계</a></li>
+                </ul>
+            </article>
+
+            <!-- 탭별 콘텐츠 -->
+            <div id="tab1" class="tab_content" style="display: none;">
+                <div class="main_table_type2">
+                    <table>
+                        <colgroup>
+                            <col width="20%;">
+                            <col width="14.5%;">
+                            <col width="14.5%;">
+                            <col width="14.5%;">
+                            <col width="14.5%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>지역</th>
+                                <th>개소수</th>
+                                <th>정상</th>
+                                <th>수리대상</th>
+                                <th>통신이상</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="top-row last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="000">전체</a></td>
+                                <td>74</td>
+                                <td>50</td>
+                                <td>17</td>
+                                <td>7</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="311">경기</a></td>
+                                <td>5</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="312">강원</a></td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="313">충북</a></td>
+                                <td>10</td>
+                                <td>8</td>
+                                <td>2</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="314">충남</a></td>
+                                <td>12</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="315">전북</a></td>
+                                <td>16</td>
+                                <td>11</td>
+                                <td>4</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="316">전남</a></td>
+                                <td>11</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="317">경북</a></td>
+                                <td>12</td>
+                                <td>10</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title last-td-title"><a href="#" class="buseo-link-1" data-code="318">경남</a></td>
+                                <td>6</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="tab2" class="tab_content" style="display: block;">
+                <div class="main_table_type2">
+                    <table>
+                        <colgroup>
+                            <col width="20%;">
+                            <col width="14.5%;">
+                            <col width="14.5%;">
+                            <col width="14.5%;">
+                            <col width="14.5%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>지역</th>
+                                <th>개소수</th>
+                                <th>정상</th>
+                                <th>수리대상</th>
+                                <th>통신이상</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="top-row last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="000">전체</a></td>
+                                <td>995</td>
+                                <td>909</td>
+                                <td>13</td>
+                                <td>73</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="311">경기</a></td>
+                                <td>65</td>
+                                <td>61</td>
+                                <td>0</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="312">강원</a></td>
+                                <td>61</td>
+                                <td>60</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="313">충북</a></td>
+                                <td>86</td>
+                                <td>64</td>
+                                <td>2</td>
+                                <td>20</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="314">충남</a></td>
+                                <td>116</td>
+                                <td>112</td>
+                                <td>1</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="315">전북</a></td>
+                                <td>143</td>
+                                <td>129</td>
+                                <td>1</td>
+                                <td>13</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="316">전남</a></td>
+                                <td>206</td>
+                                <td>201</td>
+                                <td>4</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="317">경북</a></td>
+                                <td>171</td>
+                                <td>157</td>
+                                <td>2</td>
+                                <td>12</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="318">경남</a></td>
+                                <td>145</td>
+                                <td>124</td>
+                                <td>3</td>
+                                <td>18</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title last-td-title"><a href="#" class="buseo-link-1" data-code="319">제주</a></td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="tab3" class="tab_content" style="display: none;">
+                <div class="main_table_type2">
+                    <table>
+                        <colgroup>
+                            <col width="20%;">
+                            <col width="14.5%;">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>지역</th>
+                                <th>개소수</th>
+                                <th>관심</th>
+                                <th>주의</th>
+                                <th>경계</th>
+                                <th>심각</th>
+                                <th>수리대상</th>
+                                <th>통신이상</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="top-row last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="000">전체</a></td>
+                                <td>182</td>
+                                <td>17</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>12</td>
+                                <td>55</td>
+                                <td>66</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="311">경기</a></td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="312">강원</a></td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="313">충북</a></td>
+                                <td>17</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>6</td>
+                                <td>7</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="314">충남</a></td>
+                                <td>10</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="315">전북</a></td>
+                                <td>22</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>12</td>
+                                <td>4</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="316">전남</a></td>
+                                <td>37</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="317">경북</a></td>
+                                <td>34</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>7</td>
+                                <td>17</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title"><a href="#" class="buseo-link-1" data-code="318">경남</a></td>
+                                <td>51</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>16</td>
+                                <td>21</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td rowspan="1" class=" td_title last-td-title"><a href="#" class="buseo-link-1" data-code="319">제주</a></td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="tab4" class="tab_content" style="display: none;">
+                <div class="main_table_type3">
+                    <table>
+                        <colgroup>
+                            <col width="50px">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">지역</th>
+                                <th rowspan="2">구분</th>
+                                <th rowspan="2">개소수</th>
+                                <th colspan="4" class="th_colspan">정상</th>
+                                <th rowspan="2">수리대상</th>
+                                <th rowspan="2">통신이상</th>
+                            </tr>
+                            <tr>
+                                <th>관심</th>
+                                <th>주의</th>
+                                <th>경계</th>
+                                <th class="th_line">심각</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="top-row">
+                                <td rowspan="3" class=" td_title"><a href="#" class="buseo-link-1" data-code="000">전체</a></td>
+                                <td class="td_title2">저수위계</td>
+                                <td>1843</td>
+                                <td>1484</td>
+                                <td>115</td>
+                                <td>72</td>
+                                <td>91</td>
+                                <td>0</td>
+                                <td>81</td>
+                            </tr>
+                            <tr class="top-row">
+                                <td class="td_title2">강우량계</td>
+                                <td>83</td>
+                                <td colspan="4">81</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="top-row last-of-rowspan">
+                                <td class="td_title2">유속계</td>
+                                <td>48</td>
+                                <td colspan="4">10</td>
+                                <td>18</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class=" td_title"><a href="#" class="buseo-link-1" data-code="311">경기</a></td>
+                                <td class="td_title2">저수위계</td>
+                                <td>96</td>
+                                <td>90</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>8</td>
+                                <td colspan="4">8</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">유속계</td>
+                                <td>3</td>
+                                <td colspan="4">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class=" td_title"><a href="#" class="buseo-link-1" data-code="312">강원</a></td>
+                                <td class="td_title2">저수위계</td>
+                                <td>73</td>
+                                <td>63</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>2</td>
+                                <td colspan="4">2</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">유속계</td>
+                                <td>1</td>
+                                <td colspan="4">1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class=" td_title"><a href="#" class="buseo-link-1" data-code="313">충북</a></td>
+                                <td class="td_title2">저수위계</td>
+                                <td>136</td>
+                                <td>123</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>4</td>
+                                <td colspan="4">4</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">유속계</td>
+                                <td>3</td>
+                                <td colspan="4">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class=" td_title"><a href="#" class="buseo-link-1" data-code="314">충남</a></td>
+                                <td class="td_title2">저수위계</td>
+                                <td>187</td>
+                                <td>170</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>5</td>
+                                <td colspan="4">5</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">유속계</td>
+                                <td>3</td>
+                                <td colspan="4">0</td>
+                                <td>2</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class=" td_title"><a href="#" class="buseo-link-1" data-code="315">전북</a></td>
+                                <td class="td_title2">저수위계</td>
+                                <td>203</td>
+                                <td>163</td>
+                                <td>9</td>
+                                <td>7</td>
+                                <td>16</td>
+                                <td>0</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>7</td>
+                                <td colspan="4">7</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">유속계</td>
+                                <td>5</td>
+                                <td colspan="4">0</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class=" td_title"><a href="#" class="buseo-link-1" data-code="316">전남</a></td>
+                                <td class="td_title2">저수위계</td>
+                                <td>492</td>
+                                <td>370</td>
+                                <td>42</td>
+                                <td>22</td>
+                                <td>35</td>
+                                <td>0</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>29</td>
+                                <td colspan="4">28</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">유속계</td>
+                                <td>17</td>
+                                <td colspan="4">3</td>
+                                <td>6</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class=" td_title"><a href="#" class="buseo-link-1" data-code="317">경북</a></td>
+                                <td class="td_title2">저수위계</td>
+                                <td>331</td>
+                                <td>266</td>
+                                <td>19</td>
+                                <td>13</td>
+                                <td>15</td>
+                                <td>0</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>10</td>
+                                <td colspan="4">9</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">유속계</td>
+                                <td>6</td>
+                                <td colspan="4">0</td>
+                                <td>1</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class=" td_title"><a href="#" class="buseo-link-1" data-code="318">경남</a></td>
+                                <td class="td_title2">저수위계</td>
+                                <td>315</td>
+                                <td>234</td>
+                                <td>33</td>
+                                <td>19</td>
+                                <td>12</td>
+                                <td>0</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>17</td>
+                                <td colspan="4">17</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">유속계</td>
+                                <td>9</td>
+                                <td colspan="4">3</td>
+                                <td>5</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class=" td_title last-td-title"><a href="#" class="buseo-link-1" data-code="319">제주</a></td>
+                                <td class="td_title2">저수위계</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>1</td>
+                                <td colspan="4">1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">유속계</td>
+                                <td>1</td>
+                                <td colspan="4">1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="tab5" class="tab_content" style="display: none;">
+                <div class="main_table_type2">
+                    
+                </div>
+            </div>
+
+            <div id="tab6" class="tab_content" style="display: none;">
+                <div class="main_table_type3">
+                    <table>
+                        <colgroup>
+                            <col width="50px">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">지역</th>
+                                <th rowspan="2">구분</th>
+                                <th rowspan="2">개소수</th>
+                                <th colspan="4" class="th_colspan">정상</th>
+                                <th rowspan="2">수리대상</th>
+                                <th rowspan="2">통신이상</th>
+                            </tr>
+                            <tr>
+                                <th>관심</th>
+                                <th>주의</th>
+                                <th>경계</th>
+                                <th class="th_line">심각</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="top-row">
+                                <td rowspan="7" class=" td_title"><a href="#" class="buseo-link-1" data-code="000">전체</a></td>
+                                <td class="td_title2">지진계</td>
+                                <td>74</td>
+                                <td colspan="4">50</td>
+                                <td>17</td>
+                                <td>7</td>
+                            </tr>
+                            <tr class="top-row">
+                                <td class="td_title2">누수계</td>
+                                <td>995</td>
+                                <td colspan="4">933</td>
+                                <td>19</td>
+                                <td>43</td>
+                            </tr>
+                            <tr class="top-row">
+                                <td class="td_title2">변위계</td>
+                                <td>182</td>
+                                <td>17</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>12</td>
+                                <td>55</td>
+                                <td>66</td>
+                            </tr>
+                            <tr class="top-row">
+                                <td class="td_title2">저수위계</td>
+                                <td>1843</td>
+                                <td>1484</td>
+                                <td>115</td>
+                                <td>72</td>
+                                <td>91</td>
+                                <td>0</td>
+                                <td>81</td>
+                            </tr>
+                            <tr class="top-row">
+                                <td class="td_title2">강우량계</td>
+                                <td>83</td>
+                                <td colspan="4">81</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="top-row">
+                                <td class="td_title2">유속계</td>
+                                <td>48</td>
+                                <td colspan="4">10</td>
+                                <td>18</td>
+                                <td>20</td>
+                            </tr>
+                            <tr class="top-row last-of-rowspan">
+                                <td class="td_title2">CCTV</td>
+                                <td>79</td>
+                                <td colspan="4">0</td>
+                                <td>0</td>
+                                <td>79</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="7" class=" td_title"><a href="#" class="buseo-link-1" data-code="311">경기</a></td>
+                                <td class="td_title2">지진계</td>
+                                <td>5</td>
+                                <td colspan="4">2</td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">누수계</td>
+                                <td>65</td>
+                                <td colspan="4">61</td>
+                                <td>0</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">변위계</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">저수위계</td>
+                                <td>96</td>
+                                <td>90</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>8</td>
+                                <td colspan="4">8</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">유속계</td>
+                                <td>3</td>
+                                <td colspan="4">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">CCTV</td>
+                                <td>8</td>
+                                <td colspan="4">0</td>
+                                <td>0</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="7" class=" td_title"><a href="#" class="buseo-link-1" data-code="312">강원</a></td>
+                                <td class="td_title2">지진계</td>
+                                <td>2</td>
+                                <td colspan="4">2</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">누수계</td>
+                                <td>61</td>
+                                <td colspan="4">60</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">변위계</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">저수위계</td>
+                                <td>73</td>
+                                <td>63</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>2</td>
+                                <td colspan="4">2</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">유속계</td>
+                                <td>1</td>
+                                <td colspan="4">1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">CCTV</td>
+                                <td>2</td>
+                                <td colspan="4">0</td>
+                                <td>0</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="7" class=" td_title"><a href="#" class="buseo-link-1" data-code="313">충북</a></td>
+                                <td class="td_title2">지진계</td>
+                                <td>10</td>
+                                <td colspan="4">8</td>
+                                <td>2</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">누수계</td>
+                                <td>86</td>
+                                <td colspan="4">69</td>
+                                <td>7</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">변위계</td>
+                                <td>17</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>6</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">저수위계</td>
+                                <td>136</td>
+                                <td>123</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>4</td>
+                                <td colspan="4">4</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">유속계</td>
+                                <td>3</td>
+                                <td colspan="4">1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">CCTV</td>
+                                <td>3</td>
+                                <td colspan="4">0</td>
+                                <td>0</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="7" class=" td_title"><a href="#" class="buseo-link-1" data-code="314">충남</a></td>
+                                <td class="td_title2">지진계</td>
+                                <td>12</td>
+                                <td colspan="4">5</td>
+                                <td>6</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">누수계</td>
+                                <td>116</td>
+                                <td colspan="4">113</td>
+                                <td>1</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">변위계</td>
+                                <td>10</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">저수위계</td>
+                                <td>187</td>
+                                <td>170</td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>5</td>
+                                <td colspan="4">5</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">유속계</td>
+                                <td>3</td>
+                                <td colspan="4">0</td>
+                                <td>2</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">CCTV</td>
+                                <td>5</td>
+                                <td colspan="4">0</td>
+                                <td>0</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="7" class=" td_title"><a href="#" class="buseo-link-1" data-code="315">전북</a></td>
+                                <td class="td_title2">지진계</td>
+                                <td>16</td>
+                                <td colspan="4">11</td>
+                                <td>4</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">누수계</td>
+                                <td>143</td>
+                                <td colspan="4">129</td>
+                                <td>1</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">변위계</td>
+                                <td>22</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>12</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">저수위계</td>
+                                <td>203</td>
+                                <td>163</td>
+                                <td>9</td>
+                                <td>7</td>
+                                <td>16</td>
+                                <td>0</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>7</td>
+                                <td colspan="4">7</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">유속계</td>
+                                <td>5</td>
+                                <td colspan="4">0</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">CCTV</td>
+                                <td>6</td>
+                                <td colspan="4">0</td>
+                                <td>0</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="7" class=" td_title"><a href="#" class="buseo-link-1" data-code="316">전남</a></td>
+                                <td class="td_title2">지진계</td>
+                                <td>11</td>
+                                <td colspan="4">6</td>
+                                <td>3</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">누수계</td>
+                                <td>206</td>
+                                <td colspan="4">202</td>
+                                <td>3</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">변위계</td>
+                                <td>37</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>4</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">저수위계</td>
+                                <td>492</td>
+                                <td>370</td>
+                                <td>42</td>
+                                <td>22</td>
+                                <td>35</td>
+                                <td>0</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>29</td>
+                                <td colspan="4">28</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">유속계</td>
+                                <td>17</td>
+                                <td colspan="4">3</td>
+                                <td>6</td>
+                                <td>8</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">CCTV</td>
+                                <td>28</td>
+                                <td colspan="4">0</td>
+                                <td>0</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="7" class=" td_title"><a href="#" class="buseo-link-1" data-code="317">경북</a></td>
+                                <td class="td_title2">지진계</td>
+                                <td>12</td>
+                                <td colspan="4">10</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">누수계</td>
+                                <td>171</td>
+                                <td colspan="4">162</td>
+                                <td>2</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">변위계</td>
+                                <td>34</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>7</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">저수위계</td>
+                                <td>331</td>
+                                <td>266</td>
+                                <td>19</td>
+                                <td>13</td>
+                                <td>15</td>
+                                <td>0</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>10</td>
+                                <td colspan="4">9</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">유속계</td>
+                                <td>6</td>
+                                <td colspan="4">0</td>
+                                <td>1</td>
+                                <td>5</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">CCTV</td>
+                                <td>9</td>
+                                <td colspan="4">0</td>
+                                <td>0</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="7" class=" td_title"><a href="#" class="buseo-link-1" data-code="318">경남</a></td>
+                                <td class="td_title2">지진계</td>
+                                <td>6</td>
+                                <td colspan="4">6</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">누수계</td>
+                                <td>145</td>
+                                <td colspan="4">136</td>
+                                <td>5</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">변위계</td>
+                                <td>51</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>16</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">저수위계</td>
+                                <td>315</td>
+                                <td>234</td>
+                                <td>33</td>
+                                <td>19</td>
+                                <td>12</td>
+                                <td>0</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>17</td>
+                                <td colspan="4">17</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">유속계</td>
+                                <td>9</td>
+                                <td colspan="4">3</td>
+                                <td>5</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">CCTV</td>
+                                <td>17</td>
+                                <td colspan="4">0</td>
+                                <td>0</td>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="6" class=" td_title last-td-title"><a href="#" class="buseo-link-1" data-code="319">제주</a></td>
+                                <td class="td_title2">누수계</td>
+                                <td>2</td>
+                                <td colspan="4">1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">변위계</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">저수위계</td>
+                                <td>10</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">강우량계</td>
+                                <td>1</td>
+                                <td colspan="4">1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="td_title2">유속계</td>
+                                <td>1</td>
+                                <td colspan="4">1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr class="last-of-rowspan">
+                                <td class="td_title2">CCTV</td>
+                                <td>1</td>
+                                <td colspan="4">0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+           
+           
+        </div>
+    </main>
+
+    <!-- 하단메뉴 -->
+    <nav class="bottom_nav">
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="index.html" class="nav_link on">
+              <span class="nav_icon" data-icon="menu_icon1"></span>
+              <span class="nav_text">계측</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="earthquake.html" class="nav_link">
+              <span class="nav_icon" data-icon="menu_icon2"></span>
+              <span class="nav_text">지진</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="cctv.html" class="nav_link">
+              <span class="nav_icon" data-icon="menu_icon3"></span>
+              <span class="nav_text">CCTV</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="settings.html" class="nav_link">
+              <span class="nav_icon" data-icon="menu_icon4"></span>
+              <span class="nav_text">관리</span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+    <!-- //하단메뉴 -->
+    <script>
+        // 메뉴 토글 기능
+        const btnTotalMenu = document.querySelector('.btn_total_menu');
+        const mobileMenu = document.querySelector('.mobile_menu');
+        const menuOverlay = document.querySelector('.menu_overlay');
+        const bottomNav = document.querySelector('.bottom_nav');
+        let isMenuOpen = false;
+
+        // 메뉴 열기/닫기
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+
+            if (isMenuOpen) {
+                mobileMenu.classList.add('active');
+                menuOverlay.classList.add('active');
+                btnTotalMenu.classList.add('open');
+                bottomNav.classList.add('hidden');
+            } else {
+                mobileMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                btnTotalMenu.classList.remove('open');
+                bottomNav.classList.remove('hidden');
+            }
+        }
+
+        // 버튼 클릭 이벤트
+        btnTotalMenu.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleMenu();
+        });
+
+        // 오버레이 클릭시 메뉴 닫기
+        menuOverlay.addEventListener('click', () => {
+            if (isMenuOpen) {
+                toggleMenu();
+            }
+        });
+
+        // 메뉴 링크 클릭시 메뉴 닫기
+        const menuLinks = document.querySelectorAll('.mobile_menu_list a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // 하단 네비게이션 링크 클릭 이벤트 처리
+        const navLinks = document.querySelectorAll('.nav_link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // 모든 nav_link의 on 클래스 제거
+                navLinks.forEach(l => l.classList.remove('on'));
+                // 클릭된 링크에 on 클래스 추가
+                link.classList.add('on');
+            });
+        });
+
+        // 탭 전환 기능
+        const tabLinks = document.querySelectorAll('.dashboard_tab2 a');
+        const tabContents = document.querySelectorAll('.tab_content');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const tabName = link.getAttribute('data-tab');
+
+                // 모든 탭 콘텐츠 숨기기
+                tabContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                // 클릭한 탭의 콘텐츠 보이기
+                const activeContent = document.getElementById(tabName);
+                if (activeContent) {
+                    activeContent.style.display = 'block';
+                }
+
+                // 탭 버튼 active 상태 변경
+                tabLinks.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDIs 모바일웹</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <style>
+        /* 로그인 */
+        #login {display:flex;align-items:center;justify-content:center;min-height:100vh;padding:20px}
+        .login_wrap {width:100%;max-width:400px;padding:0 30px}
+        .login_title {margin-bottom:40px;text-align:center}
+        .login_title img {max-width:100%;height:auto}
+        .login_wrap .input_type_c {width:100%;height:56px !important;border:0;background-color:#F1F4FF;border:none;border-bottom:1px solid transparent;padding:12px;box-sizing:border-box;font-size:14px;transition:border-bottom 0.3s ease;margin-bottom:20px}
+        .login_wrap .input_type_c:focus {outline:none;border-bottom:1px solid #1F41BB}
+        .login_wrap .input_type_c::placeholder {color:#999}
+        .label_check_wrap {margin-bottom:30px;display:flex;align-items:center;gap:8px}
+        .label_check_wrap input[type="checkbox"] {display:none}
+        .label_check_wrap input[type="checkbox"] + label {cursor:pointer;font-size:14px;color:#333;display:flex;align-items:center;gap:8px;margin:0}
+        .label_check_wrap input[type="checkbox"] + label::before {content:'';width:20px;height:20px;background-color:#E2E4EA;border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+        .label_check_wrap input[type="checkbox"]:checked + label::before {content:'✓';background-color:#1F41BB;color:white;font-weight:bold;font-size:12px}
+        .login_btn {width:100%;height:56px;background-color:#1F41BB;color:white;border:none;border-radius:4px;font-size:16px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(203, 214, 255, 0.4);margin-bottom:20px;transition:background-color 0.3s ease}
+        .login_btn:hover {background-color:#1a3699}
+        .findpw_btn {width:100%;height:auto;background:transparent;color:#1F41BB;border:none;font-size:14px;font-weight:600;cursor:pointer;padding:12px 0;text-align:center}
+        .findpw_btn:hover {text-decoration:underline}
+        .bottom_logo {margin-top:80px;text-align:center}
+        .bottom_logo img {max-width:100%;height:auto}
+    </style>
+</head>
+<body>
+    <div id="login">
+        <div class="login_wrap">            
+            <div class="login_title">
+               <img src="images/logo_login.png" alt="REDIs 저수지 지진 재해정보 시스템">              
+            </div>
+            <form name="form" method="post" action="/loginProcess" id="loginform">
+                <input type="text" id="input_id" placeholder="ID" class="input_type_c">
+                <input type="password" id="input_password" placeholder="Password" class="input_type_c">
+                <div class="label_check_wrap">
+                    <input type="checkbox" id="save-id">
+                    <label for="save-id">아이디 저장</label>              
+                </div>  
+                <button class="login_btn" id="user_login">로그인</button>
+                <!-- <button class="signup_btn" id="user_signup">회원가입</button> -->
+                <button class="findpw_btn" id="user_findpw">비밀번호 찾기</button>
+                <!-- <button class="signup_btn" id="user_signup">회원가입</button> -->
+                
+                <input type="hidden" name="id" id="id">
+                <input type="hidden" name="pw" id="pw">
+                <input type="hidden" name="org_pw" id="org_pw">
+                <input type="hidden" name="login_type" id="login_type">
+            </form>
+            <div class="bottom_logo">
+                <img src="images/logo_kr.png" alt="REDIs 저수지 지진 재해정보 시스템">              
+             </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDIs 모바일웹</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+    <header>
+        <div class="header_wrap">
+            <h1><a href="/"><img src="images/logo_white.png" alt="REDis 저수지 지진 재해정보시스템"></a></h1>
+            <a href="" class="btn_total_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+
+        <!-- 모바일 사이드 메뉴 -->
+        <nav class="mobile_menu">
+            <!-- 메뉴 상단 (close) -->
+            <div class="mobile_menu_header">
+                <button class="btn_menu_close">✕</button>
+            </div>
+
+            <!-- 프로필 섹션 -->
+            <div class="mobile_profile">
+                <div class="profile_content">
+                    <img src="images/bg_avatar.png" alt="프로필" class="profile_img">
+                    <div class="profile_info">
+                        <p class="profile_name">관리자</p>
+                        <p class="profile_id">admin</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 로그아웃 버튼 -->
+            <div class="mobile_menu_logout">
+                <button class="btn_logout">로그아웃</button>
+            </div>
+
+            <!-- 메뉴 리스트 -->
+            <ul class="mobile_menu_list">
+                <li><a href="#menu1">메뉴1</a></li>
+                <li><a href="#menu2">메뉴2</a></li>
+                <li><a href="#menu3">메뉴3</a></li>
+            </ul>
+        </nav>
+
+        <!-- 메뉴 배경 오버레이 -->
+        <div class="menu_overlay"></div>
+
+    </header>
+
+
+    <main class="container">   
+        <div class="container_area">
+            <div class="section_title">
+                <h2>cctv영상</h2>
+            </div>
+          
+            
+            <div class="search_box_wrap">
+                <!-- 첫째줄: 본부, 지사, 시설 -->
+                <div class="select_container">
+                    <div class="select_type3">             
+                        <select id="s_buseo_head_code" class="js-example-basic-single">
+                            <option value="">본부</option>
+                            <option value="311">경기</option>
+                            <option value="312">강원</option>
+                            <option value="313">충북</option><option value="314">충남</option>
+                            <option value="315">전북</option>
+                            <option value="316">전남</option><option value="317">경북</option>
+                            <option value="318">경남</option><option value="319">제주</option>
+                        </select>
+                    
+                        <select id="s_branch_code" class="js-example-basic-single">
+                            <option value="">지사</option>
+                            <option value="311">경기</option>
+                            <option value="312">강원</option>
+                            <option value="313">충북</option><option value="314">충남</option>
+                            <option value="315">전북</option>
+                            <option value="316">전남</option><option value="317">경북</option>
+                            <option value="318">경남</option><option value="319">제주</option>
+                        </select>
+                    
+                        <select id="s_facility_code" class="js-example-basic-single">
+                            <option value="">시설</option>
+                            <option value="311">경기</option>
+                            <option value="312">강원</option>
+                            <option value="313">충북</option><option value="314">충남</option>
+                            <option value="315">전북</option>
+                            <option value="316">전남</option><option value="317">경북</option>
+                            <option value="318">경남</option><option value="319">제주</option>
+                        </select>
+                    </div>      
+                </div>
+
+            </div>
+
+            
+                <!-- 둘째줄: 검색어 input과 검색버튼 -->
+                <div class="search_input_wrap mt-4">
+                    <input type="text" placeholder="검색어를 입력해주세요.">
+                    <button type="button" class="btn_search" id="equipFluxBaseSearchBtn">검색</button>
+                </div>
+
+                <!-- 상세검색 영역 -->
+                <div class="detail_search_area" id="detailSearchArea" style="display:none;">
+                    <!-- 구분 라인 -->
+                    <div class="detail_search_divider"></div>
+
+                    <!-- 첫 줄: 관제대상, 강우구분, 강우량입력 -->
+                    <div class="detail_search_row">
+                        <div class="detail_search_col">
+                            <select id="s_management_target">
+                                <option value="">관제대상</option>
+                                <option value="1">대상1</option>
+                                <option value="2">대상2</option>
+                            </select>
+                        </div>
+                        <div class="detail_search_col">
+                            <select id="s_rainfall_type">
+                                <option value="">강우구분</option>
+                                <option value="1">구분1</option>
+                                <option value="2">구분2</option>
+                            </select>
+                        </div>
+                        <div class="detail_search_col">
+                            <input type="text" placeholder="강우량입력">
+                        </div>
+                    </div>
+
+                    <!-- 두 번째 줄: 계측구분, 경보단계 -->
+                    <div class="detail_search_row">
+                        <div class="detail_search_col">
+                            <select id="s_measurement_type">
+                                <option value="">계측구분</option>
+                                <option value="1">계측1</option>
+                                <option value="2">계측2</option>
+                            </select>
+                        </div>
+                        <div class="detail_search_col">
+                            <select id="s_alarm_level">
+                                <option value="">경보단계</option>
+                                <option value="1">단계1</option>
+                                <option value="2">단계2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 상세검색 실행 버튼 -->
+                    <button type="button" class="btn_detail_search_execute">상세검색</button>
+                </div>
+
+                <!-- 셋째줄: 상세검색 토글 버튼 -->
+                <button type="button" class="btn_detail_search" id="btnDetailSearch">상세검색열기</button>
+           
+
+        </div>
+    </main>
+
+    <!-- 하단메뉴 -->
+    <nav class="bottom_nav">
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a href="index.html" class="nav_link">
+              <span class="nav_icon" data-icon="menu_icon1"></span>
+              <span class="nav_text">계측</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="earthquake.html" class="nav_link">
+              <span class="nav_icon" data-icon="menu_icon2"></span>
+              <span class="nav_text">지진</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="cctv.html" class="nav_link on">
+              <span class="nav_icon" data-icon="menu_icon3"></span>
+              <span class="nav_text">CCTV</span>
+            </a>
+          </li>
+          <li class="nav_item">
+            <a href="settings.html" class="nav_link">
+              <span class="nav_icon" data-icon="menu_icon4"></span>
+              <span class="nav_text">관리</span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+    <!-- //하단메뉴 -->
+    <script>
+        // 메뉴 토글 기능
+        const btnTotalMenu = document.querySelector('.btn_total_menu');
+        const mobileMenu = document.querySelector('.mobile_menu');
+        const menuOverlay = document.querySelector('.menu_overlay');
+        const bottomNav = document.querySelector('.bottom_nav');
+        let isMenuOpen = false;
+
+        // 메뉴 열기/닫기
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+
+            if (isMenuOpen) {
+                mobileMenu.classList.add('active');
+                menuOverlay.classList.add('active');
+                btnTotalMenu.classList.add('open');
+                bottomNav.classList.add('hidden');
+            } else {
+                mobileMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                btnTotalMenu.classList.remove('open');
+                bottomNav.classList.remove('hidden');
+            }
+        }
+
+        // 버튼 클릭 이벤트
+        btnTotalMenu.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleMenu();
+        });
+
+        // 오버레이 클릭시 메뉴 닫기
+        menuOverlay.addEventListener('click', () => {
+            if (isMenuOpen) {
+                toggleMenu();
+            }
+        });
+
+        // 메뉴 링크 클릭시 메뉴 닫기
+        const menuLinks = document.querySelectorAll('.mobile_menu_list a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // close 버튼 클릭시 메뉴 닫기
+        const btnMenuClose = document.querySelector('.btn_menu_close');
+        if (btnMenuClose) {
+            btnMenuClose.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (isMenuOpen) {
+                    toggleMenu();
+                }
+            });
+        }
+
+        // 하단 네비게이션 링크 클릭 이벤트 처리
+        const navLinks = document.querySelectorAll('.nav_link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // 모든 nav_link의 on 클래스 제거
+                navLinks.forEach(l => l.classList.remove('on'));
+                // 클릭된 링크에 on 클래스 추가
+                link.classList.add('on');
+            });
+        });
+
+        // 탭 전환 기능
+        const tabLinks = document.querySelectorAll('.dashboard_tab2 a, .tab_menu a');
+        const tabContents = document.querySelectorAll('.tab_content, .area_tab_content');
+
+        tabLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const tabName = link.getAttribute('data-tab');
+
+                // 모든 탭 콘텐츠 숨기기
+                tabContents.forEach(content => {
+                    content.style.display = 'none';
+                });
+
+                // 클릭한 탭의 콘텐츠 보이기
+                const activeContent = document.getElementById(tabName);
+                if (activeContent) {
+                    activeContent.style.display = 'block';
+                }
+
+                // 탭 버튼 active 상태 변경
+                tabLinks.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                link.classList.add('active');
+            });
+        });
+
+        // 상세검색 토글 기능
+        const btnDetailSearch = document.getElementById('btnDetailSearch');
+        const detailSearchArea = document.getElementById('detailSearchArea');
+
+        btnDetailSearch.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            if (btnDetailSearch.classList.contains('active')) {
+                // 닫을 때
+                btnDetailSearch.classList.remove('active');
+                detailSearchArea.classList.remove('active');
+                btnDetailSearch.textContent = '상세검색열기';
+
+                // transition 완료 후에 display 변경
+                setTimeout(() => {
+                    detailSearchArea.style.display = 'none';
+                }, 400);
+            } else {
+                // 열 때
+                detailSearchArea.style.display = 'block';
+
+                // 브라우저 repaint를 위해 약간의 딜레이 후 active 클래스 추가
+                requestAnimationFrame(() => {
+                    btnDetailSearch.classList.add('active');
+                    detailSearchArea.classList.add('active');
+                });
+
+                btnDetailSearch.textContent = '상세검색닫기';
+            }
+        });
+    </script>
+</body>
+</html>
