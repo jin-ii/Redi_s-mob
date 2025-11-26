@@ -25,8 +25,8 @@ header{background-color:#3D448D;height:58px;display:flex;align-items:center;padd
 .profile_content{display:flex;align-items:center;gap:12px}
 .profile_img{width:40px;height:40px;border-radius:50%;object-fit:cover}
 .profile_info{display:flex;flex-direction:column;gap:2px}
-.profile_name{font-size:16px;color:#435190;font-weight:600;margin:0;padding:0}
-.profile_id{font-size:13px;color:#A0A5BC;font-weight:normal;margin:0;padding:0}
+.profile_name{font-size:17px;color:#435190;font-weight:600;margin:0;padding:0}
+.profile_id{font-size:14px;color:#A0A5BC;font-weight:normal;margin:0;padding:0}
 
 /* 로그아웃 섹션 */
 .mobile_menu_logout{padding:12px 20px;border-bottom:1px solid #E5EBFF}
@@ -36,8 +36,10 @@ header{background-color:#3D448D;height:58px;display:flex;align-items:center;padd
 /* 메뉴 리스트 */
 .mobile_menu_list{list-style:none;padding:15px 0 0 0;margin:0;flex:1}
 .mobile_menu_list li{border-bottom:1px solid #E5EBFF}
-.mobile_menu_list a{display:block;padding:16px 20px;color:#333;text-decoration:none;font-size:16px;transition:background-color 0.2s ease}
-.mobile_menu_list a:hover{background-color:#E5EBFF}
+.mobile_menu_list a{display:block;padding:16px 20px;color:#333;text-decoration:none;font-size:16px;transition:background-color 0.2s ease,color 0.2s ease;position:relative}
+.mobile_menu_list a::after{content:"";display:inline-block;position:absolute;right:20px;top:50%;transform:translateY(-50%);width:10px;height:10px;background-image:url('../images/btn_menu_arrow.png');background-size:contain;background-repeat:no-repeat;background-position:center;transition:opacity 0.2s ease}
+.mobile_menu_list a:hover{background-color:#5A71E9;color:#fff}
+.mobile_menu_list a:hover::after{background-image:url('../images/btn_menu_arrow_on.png')}
 .menu_overlay{position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0);z-index:100;opacity:0;pointer-events:none;transition:opacity 0.5s ease,background-color 0.5s ease}
 .menu_overlay.active{background-color:rgba(0,0,0,0.5);opacity:1;pointer-events:auto}
 
@@ -195,7 +197,7 @@ header{background-color:#3D448D;height:58px;display:flex;align-items:center;padd
 .btn_excel:hover{background-color:#f5f5f5}
 
 /* search box */
-.search_box_wrap{display:flex;gap:4px;align-items:center;margin-top:15px}
+.search_box_wrap{display:flex;gap:4px;align-items:center}
 .search_box_wrap .sb-col{flex:1;display:flex}
 .search_box_wrap .sb-col select{width:100%}
 .search_box_wrap .btn_search{flex-shrink:0}
@@ -228,3 +230,52 @@ header{background-color:#3D448D;height:58px;display:flex;align-items:center;padd
 .btn_detail_search_execute{width:100%;height:45px;background-color:#5A71E9;color:#fff;border:none;font-size:15px;font-weight:600;cursor:pointer;margin-top:10px;transition:all 0.3s ease}
 .btn_detail_search_execute:hover{background-color:#4A5FD4}
 .btn_search{cursor:pointer;border:none;height:45px;background:#5A71E9;color:#fff;padding:0 20px;white-space:nowrap}
+
+/* 지진 */
+.monitoring_tabs{display:flex;gap:15px;margin-bottom:15px;}
+.monitoring_tab{padding:10px 0 0 0;font-size:16px;cursor:pointer;color:#333;}
+.monitoring_tabs span{margin-left:5px;font-weight:600;color:#28388C;}
+.p_info{font-size:16px;color:#f13232;margin-top:10px;padding:0;display:flex;justify-content:space-between;align-items:center}
+.p_info_sub{color:#f13232;font-weight:normal}
+
+/* 실시간 PGA 모니터링 관측소 테이블 */
+.station_table{width:100%;border-collapse:collapse;font-size:12px;margin:15px 0;}
+.station_table th{background-color:#CCD9FD;color:#3856CB;padding:7px;text-align:center;font-weight:700;font-size:15px;border:1px solid #b5c1e4;}
+.station_table td{padding:6px 2px;text-align:center;font-size:15px;border-bottom:1px solid #b5c1e4}
+.station_table tr{cursor:pointer;transition:background-color 0.2s;}
+.station_table tr:nth-child(even){background-color:#F0F3FB;}
+.station_table tr:hover{background-color:#E5EAF8;}
+.station_table tr.selected{background-color:#efefef;}
+.chart_container{display:none;margin-top:15px;}
+.chart_row td{background-color:#fff;}
+.chart_row_content{background:#fff;}
+.seismic_station_name{background:transparent;color:#28388C;font-weight:700}
+.seismic_station_info{background:#98B5DA;color:#fff;margin:1px;padding:5px;}
+.station_table .info_color1{background-color:#6297FA}
+.station_table .info_color2{background-color:#6A94C7}
+
+/* pagination */
+.pagination{display:flex;justify-content:center;align-items:center;margin-top:20px}
+    .pagination li.active > a{background-color:#5A71E9;color:#fff;}
+    .pagination li.active > a:hover{background-color:#5A71E9}
+    .pagination li:first-child a{margin-left:0}
+    .pagination li a{display:block;padding:0 1px;font-size:13px;margin-right:4px;text-align:center;line-height:33px;min-width:33px;min-height:33px;background-color:#fff;color:#666;margin-left:-1px}
+    .pagination li a.arrow{background:#fff url(/images/icon_page_next.png) 50% 50% no-repeat}
+    .pagination li a.prev{transform:rotateZ(-180deg)}
+    .pagination li a.arrow2{background:#fff url(/images/icon_page_forward.png) 50% 50% no-repeat}
+    .pagination li a.forward{transform:rotateZ(-180deg)}
+    .pagination li a:hover{background-color:#5A71E9;text-decoration:none;color:#fff}
+
+/* cctv */
+.cctv_wrap{margin-top:15px}
+.cctv_wrap .cctv_box{position:relative;width:100%;aspect-ratio:16/9}
+.cctv_wrap .cctv_box h4{width:100%;height:40px;position:absolute;top:0;left:0;font-size:17px;background:rgba(49,49,49,0.4);color:#fff;font-weight:600;display:flex;align-items:center;padding:0 20px;box-sizing:border-box;z-index:10}
+.cctv_wrap .cctv_box .cctv_screen{width:100%;height:100%;object-fit:cover;background:#000}
+.cctv_wrap .cctv_box .cctv_screen img{width:100%;height:100%;object-fit:cover}
+.cctv_wrap .cctv_box .alarm{width:100%;height:40px;line-height:45px;padding:0 20px;white-space:nowrap;overflow:hidden;position:absolute;left:0;bottom:0;z-index:9;color:#fff;font-size:16px;font-weight:500}
+.cctv_wrap .cctv_box .alarm-1{background:rgb(211, 47, 47,0.6);}
+.cctv_wrap .cctv_box .alarm-2{background:rgb(255, 170, 43,0.6);}
+.cctv_wrap .cctv_box .alarm-3{background:rgb(64, 124, 215,0.6);}
+.cctv_wrap .cctv_box ul.data_list{color:#717077;font-weight:500;background:#d6d9ed;line-height:20px;padding:12px 30px 12px 15px;font-size:15px}
+.cctv_wrap .cctv_box .btn_expand{position:absolute;bottom:70px;right:0px;z-index:999;color:#fff;width:34px;height:34px;background:rgba(0,0,0,0.4);display:flex;justify-content:center;align-items:center;opacity:0.9}
+.cctv_wrap .cctv_box .btn_expand:hover{background:rgba(0,0,0,0.5)}

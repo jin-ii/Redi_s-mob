@@ -53,7 +53,7 @@
     <main class="container">   
         <div class="container_area">
             <div class="section_title">
-                <h2>cctv영상</h2>
+                <h2>CCTV영상</h2>
             </div>
           
             
@@ -152,7 +152,28 @@
 
                 <!-- 셋째줄: 상세검색 토글 버튼 -->
                 <button type="button" class="btn_detail_search" id="btnDetailSearch">상세검색열기</button>
-           
+                <div class="cctv_wrap">
+                    <div class="cctv_box" id="cctv_box2">
+                        <h4>[안성]농촌저수지1</h4>
+                        <video id="video2" playsinline="" muted="" class="cctv_screen"></video>
+                        <a href="" class="btn_expand" data-idx="2">
+                            <img src="/images/icon_cctv_expand.png" alt="확대">
+                        </a>
+                        <ul class="data_list">
+                            <li>저수지수위 45.70 El.m</li>
+                            <li>누적강우량 0.0 mm</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="pagination" style="padding-bottom:20px;">
+                    <li class="active"><a href="#" class="td_link">1</a></li>
+                    <li><a href="#" class="td_link">2</a></li>
+                    <li><a href="#" class="td_link">3</a></li>
+                    <li><a href="#" class="td_link">4</a></li>
+                    <li><a href="#" class="td_link">5</a></li>
+                    <li><a href="#" class="arrow next" id="arrow_next"><span class="hidden">다음</span></a></li>
+                    <li><a href="#" class="arrow2 last" id="arrow_last"><span class="hidden">맨뒤로</span></a></li>
+                </ul>
 
         </div>
     </main>
